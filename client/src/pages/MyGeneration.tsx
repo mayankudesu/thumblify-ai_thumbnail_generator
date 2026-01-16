@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import SoftBackdrop from "../components/SoftBackdrop";
-import { dummyThumbnails, type IThumbnail } from "../assets/assets";
+import { type IThumbnail } from "../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowUpRightIcon, DownloadIcon, TrashIcon } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
+import api from "../configs/api";
+import toast from "react-hot-toast";
 
 const MyGeneration = () => {
 
@@ -20,20 +22,45 @@ const MyGeneration = () => {
   const [loading, setLoading] = useState(false);
 
   const fetchThumbnails = async () => {
-    
+    try {
+      setLoading(true)
+      const { data } = await api.get("/api/user/thumbnails");
+      setThumbnails(data.thumbnails || [])
+    } catch (error: any) {
+      console.error(error);
+      toast.error(error?.response?.data?.message || error.message)
+    }
+    finally {
+      setLoading(false) 
+    }
   };
 
   const handleDownload = (image_url: string) => {
-    window.open(image_url, "_blank");
+    const link = document.createElement('a');
+        link.href = image_url.replace('/upload', '/upload/fl_attachment');
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
   };
 
   const handleDelete = async (id: string) => {
-    console.log(id);
+    try {
+      const confirm = window.confirm('Are you sure you want to delete this thumbnail?'); 
+      if(!confirm) return;
+      const { data } = await api.delete(`/api/user/thumbnail/${id}`)
+      toast.success(data.message)
+      setThumbnails(thumbnails.filter((t) => t._id !== id))
+    } catch (error: any) {
+      console.error(error);
+      toast.error(error?.response?.data?.message || error.message)
+    }
   };
 
   useEffect(() => {
-    fetchThumbnails();
-  }, []);
+    if(isLoggedIn) {
+      fetchThumbnails();
+    }
+  }, [isLoggedIn]);
 
   return (
     <>
