@@ -9,7 +9,7 @@ import YtPreview from "./pages/YtPreview";
 import Login from "./components/Login";
 import MyGeneration from "./pages/MyGeneration";
 import { useEffect } from "react";
-
+import { Toaster } from "react-hot-toast"
 
 export default function App() {
 
@@ -21,6 +21,7 @@ export default function App() {
 
   return (
     <>
+      <Toaster />    
       <LenisScroll />
       <Navbar />
       <Routes>

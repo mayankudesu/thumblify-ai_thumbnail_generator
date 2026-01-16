@@ -3,9 +3,11 @@ import SoftBackdrop from "../components/SoftBackdrop";
 import { dummyThumbnails, type IThumbnail } from "../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowUpRightIcon, DownloadIcon, TrashIcon } from "lucide-react";
+import { useAuth } from "../context/AuthContext";
 
 const MyGeneration = () => {
 
+  const { isLoggedIn } = useAuth();
   const navigate = useNavigate()
 
   const aspectRatioClassMap : Record<string, string> = {
@@ -18,8 +20,7 @@ const MyGeneration = () => {
   const [loading, setLoading] = useState(false);
 
   const fetchThumbnails = async () => {
-    setThumbnails(dummyThumbnails as unknown as IThumbnail[]);
-    setLoading(false);
+    
   };
 
   const handleDownload = (image_url: string) => {
