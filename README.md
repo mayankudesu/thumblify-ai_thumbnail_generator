@@ -81,7 +81,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/mayankudesu/thumblify.git
 cd thumblify
-
+```
 
 
 ### Install
@@ -102,9 +102,6 @@ npm run dev
 
 Open your browser and go to `http://localhost:5173` (or the port shown in your terminal).
 
-### Run Tests
-
-> _No tests are currently set up. Add your test scripts here._
 
 ### Deployment
 
