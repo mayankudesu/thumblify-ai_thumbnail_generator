@@ -1,3 +1,7 @@
+# Thumblify - AI Thumbnail Generator
+
+![image alt](https://github.com/mayankudesu/thumblify-ai_thumbnail_generator/blob/a33b5767f6dfc253ffc9629f41aa752fd5e69330/thumblify-preview.png)
+
 ## 📗 Table of Contents
 
 - [📖 About the Project](#-about-the-project)
