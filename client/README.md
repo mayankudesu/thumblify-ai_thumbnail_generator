@@ -79,7 +79,7 @@ Follow the steps below to run the project locally.
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/thumblify.git
+git clone https://github.com/mayankudesu/thumblify.git
 cd thumblify
 
 
