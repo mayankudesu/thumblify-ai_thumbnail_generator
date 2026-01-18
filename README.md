@@ -5,6 +5,8 @@
 **Thumblify** is an AI-powered thumbnail generation web application built using the **MERN stack with TypeScript**.  
 It leverages **Google Gemini** to automatically generate visually appealing thumbnails, helping content creators save time and boost engagement.
 
+---
+
 ## 📗 Table of Contents
 
 - [📖 About the Project](#-about-the-project)
