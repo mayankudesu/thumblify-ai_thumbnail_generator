@@ -1,3 +1,12 @@
+# Thumblify - AI Thumbnail Generator
+
+![image alt](https://github.com/mayankudesu/thumblify-ai_thumbnail_generator/blob/a33b5767f6dfc253ffc9629f41aa752fd5e69330/thumblify-preview.png)
+
+**Thumblify** is an AI-powered thumbnail generation web application built using the **MERN stack with TypeScript**.  
+It leverages **Google Gemini** to automatically generate visually appealing thumbnails, helping content creators save time and boost engagement.
+
+---
+
 ## 📗 Table of Contents
 
 - [📖 About the Project](#-about-the-project)
@@ -81,7 +90,8 @@ Clone the repository:
 ```bash
 git clone https://github.com/mayankudesu/thumblify.git
 cd thumblify
-```
+
+
 
 ### Install
 
@@ -101,9 +111,6 @@ npm run dev
 
 Open your browser and go to `http://localhost:5173` (or the port shown in your terminal).
 
-### Run Tests
-
-> _No tests are currently set up. Add your test scripts here._
 
 ### Deployment
 
