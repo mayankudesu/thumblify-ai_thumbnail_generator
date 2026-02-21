@@ -81,8 +81,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/mayankudesu/thumblify.git
 cd thumblify
-
-
+```
 
 ### Install
 
